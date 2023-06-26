@@ -10,10 +10,26 @@ While **monolithic architecture** is a single, tightly-integrated unit, microser
 On the other hand, **microservices** represent a way of building applications where components are small, independent and communicate through simple APIs. Each microservice is responsible for a specific business capability and works as a separate, independent component. This allows for easy scaling and modification of individual services without affecting the functionality of other services.
 
 ### Microservices Risks
-| it's important to note that microservices come with their own risk factors preinstalled.
+| It's important to note that microservices come with their own risk factors preinstalled.
 - unnecessary complexity
 - changes impact numerous services
-- complex security 
+- complex security
+- complexity is added to resolve complexity issues
+- testing might appear simpler, but usually isn't
+- deployment may appear simpler, but usually isn't
+- multiple databases
+- latency issues may be added via the API layer. So additional testing is required
+- Transient errors, implement retry strategies to fix this
+- multiple points of failure can occur instead of SPoF
+
+
+### Microservices Benefits
+| There are also plenty of benefits preinstalled into microservices as well.
+- improved fault isolation, less risk of single points of failure
+- eliminate vendor or technology lock-in
+- easy to understand
+- smaller and faster to deploy
+- scalability
 
 
 ## Basics
