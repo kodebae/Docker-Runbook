@@ -39,10 +39,28 @@ On the other hand, **microservices** represent a way of building applications wh
 
 ## Basics
 ---
+1.  What is a Docker Image?
+- An executable application artifact. This includes the app source code and complete environment configuration. You can add the environment variables, create directories, files, etc.
+- Immutable template that defines how a container will be realized. 
+- You can run multiple containers from 1 image.
 
+2. What is a Docker Container?
+- The container actually starts the application.
+- A running instance of an image is a Docker container.
 
 ## Docker Examples
 ---
+When we install docker we get access to Docker in our CLI. 
+### List of Docker CLI Commands
+```
+docker images
+```
+- gives a list of available Docker images
+```
+docker ps
+```
+- gives a list of currently running containers
+
 
 ## Files
 ---
