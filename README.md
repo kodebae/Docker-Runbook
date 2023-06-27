@@ -7,9 +7,13 @@ A place for Docker tutorials, learning, examples, and an overall resource guide.
 
 What is Docker? Docker is a virtualization software that makes developing and deploying applications much easier. Docker packages all necessary dependencies, libraries, configuration, system tools and runtime into a container. Which can be easily shared and distributed.
 
+With containers you don't have to install any of the services directly onto your operating system.
+
 While **monolithic architecture** is a single, tightly-integrated unit, microservices are made up of loosely-coupled, independently deployable components. Microservices allow for better scalability, flexibility and maintainability, but require additional complexity in communication and orchestration between services.
 
-On the other hand, **microservices** represent a way of building applications where components are small, independent and communicate through simple APIs. Each microservice is responsible for a specific business capability and works as a separate, independent component. This allows for easy scaling and modification of individual services without affecting the functionality of other services.
+On the other hand, **microservices** represent a way of building applications where components are small, independent and communicate through simple APIs. Each microservice is responsible for a specific business capability and works as a separate, independent component. This allows for easy scaling and modification of individual services without affecting the functionality of other services. The service gets packaged into one isolated environment. Docker standardized the process of running any service on any local dev environment.
+
+**Docker IS NOT a virtual machine.** Docker will virtualize the application layer and use the Kernel of the host. It doesn't have it own Kernel. A virtual machine has it's own Kernel and also uses the application layer. Docker image files are much smaller. Docker containers takes seconds,not minuets.
 
 ### Microservices Risks
 | It's important to note that microservices come with their own risk factors preinstalled.
