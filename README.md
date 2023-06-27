@@ -20,7 +20,7 @@ On the other hand, **microservices** represent a way of building applications wh
 
 ### Microservices Risks
 | It's important to note that microservices come with their own risk factors preinstalled.
-- unnecessary complexity
+- unnecessarily complexity
 - changes impact numerous services
 - complex security
 - complexity is added to resolve complexity issues
@@ -53,7 +53,14 @@ On the other hand, **microservices** represent a way of building applications wh
 
 3. How do we get Docker Images?
 - A storage and distribution system, the Docker registry.
-- [Official Docker Registry](https://hub.docker.com/search?image_filter=official&q=)
+- [Official Docker Hub](https://hub.docker.com/search?image_filter=official&q=)
+- Docker Registry has "official images" that are maintained and developed by a team.
+- Docker Hub is the default location that Docker will check to locate any image.
+
+4. Image versioning, also known as image tags?
+- What happens if my technology updates? A new Docker image will be created.
+- When you need a specific version of a technology you can choose the Docker image of the corresponding version. 
+- Latest tag is the latest version of the technology. If you don;t choose a version specifically you get the latest version of the technology. 
 
 ## Docker Examples
 ---
@@ -68,7 +75,23 @@ docker ps
 ```
 - gives a list of currently running containers
 
-
+### How to pull an image from Docker Hub
+1. locate the image you want to pull
+2. find the tag you need, select a specific version
+3. execute the commmand with image name and version tag seperated by a colon 
+``` 
+docker pull image:0.14
+```
+### How to run an image
+1. execute the commmand with image name and version tag seperated by a colon
+```
+docker run image:0.14
+```
+- add -d tag before image name to run the container detached and in the background.
+```
+docker run -d image:0.14
+```
+- to exit the process 'ctrl + c' will kill the contianer and the process will die. 
 ## Files
 ---
 
