@@ -1,11 +1,14 @@
 # 📒 The Docker Runbook
+---
 A place for Docker tutorials, learning, examples, and an overall resource guide. 
+
+<img align="center" alt="Coding" width="1200" src="https://media.giphy.com/media/Ab2UG9MKeRyYrERcyC/giphy.gif">
 
 ## Intro
 ---
 **Docker is a platform** that allows developers to easily develop, deploy, and run applications in a containerized environment. Docker containers are lightweight, flexible, and can be run on any operating system. They allow developers to package an application with all of its dependencies into a single, portable container, ensuring that the application runs consistently in any environment. This makes it easier to manage and deploy applications, as well as streamline the development process. 
 
-What is Docker? Docker is a virtualization software that makes developing and deploying applications much easier. Docker packages all necessary dependencies, libraries, configuration, system tools and runtime into a container. Which can be easily shared and distributed.
+**What is Docker?** Docker is a virtualization software that makes developing and deploying applications much easier. Docker packages all necessary dependencies, libraries, configuration, system tools and runtime into a container. Which can be easily shared and distributed.
 
 With containers you don't have to install any of the services directly onto your operating system.
 
@@ -47,6 +50,10 @@ On the other hand, **microservices** represent a way of building applications wh
 2. What is a Docker Container?
 - The container actually starts the application.
 - A running instance of an image is a Docker container.
+
+3. How do we get Docker Images?
+- A storage and distribution system, the Docker registry.
+- [Official Docker Registry](https://hub.docker.com/search?image_filter=official&q=)
 
 ## Docker Examples
 ---
@@ -90,6 +97,8 @@ Uses containers, service meshes, microservices, immutable infrastructure, and de
 
 ## Additional Resources
 ---
+[Docker Docs](https://docs.docker.com)
 [Cloud Native Interactive Landscape](landscape.cncf.io/?fullscreen=yes)
+
 
 
