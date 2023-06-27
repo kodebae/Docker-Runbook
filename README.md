@@ -74,6 +74,10 @@ docker images
 docker ps
 ```
 - gives a list of currently running containers
+```
+docker logs 089e2423ff48
+```
+- the docker logs command plus the container id will give you the logs from the service running in your contianer
 
 ### How to pull an image from Docker Hub
 1. locate the image you want to pull
@@ -92,6 +96,7 @@ docker run image:0.14
 docker run -d image:0.14
 ```
 - to exit the process 'ctrl + c' will kill the contianer and the process will die. 
+- if you execute the run command without pulling the image first Docker will automatically search for, pull, then run the image specified. 
 ## Files
 ---
 
