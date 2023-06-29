@@ -96,15 +96,43 @@ docker run image:0.14
 docker run -d image:0.14
 ```
 - to exit the process 'ctrl + c' will kill the contianer and the process will die. 
-- if you execute the run command without pulling the image first Docker will automatically search for, pull, then run the image specified. 
+- if you execute the run command without pulling the image first Docker will automatically search for, pull, then run the image specified.
+
 ## Files
 ---
+A Dockerfile is a plain text file that contains instructions used to build a Docker image. The structure of a Dockerfile consists of a series of instructions, each on a new line. Here is a breakdown of the Dockerfile structure:
+
+**Base image:** The first line of the Dockerfile specifies the base image to be used. It defines the starting point for the build process. For example, FROM ubuntu:latest selects the latest version of Ubuntu as the base image.
+
+**Maintainer:** The MAINTAINER instruction allows you to specify the author or maintainer of the image. It is an optional field.
+
+**Environment variables:** You can set environment variables using the ENV instruction. These variables are accessible during build time and when the container is running.
+
+**Working directory:** The WORKDIR instruction sets the working directory for any following instructions. It is similar to the cd command.
+
+Copy files: The COPY and ADD instructions copy files and directories from the build context (the current directory) to the container's filesystem.
+
+Executing commands: The RUN instruction executes commands in the container during the build process. Multiple RUN instructions can be chained together.
+
+Exposing ports: The EXPOSE instruction documents the ports that the container listens on at runtime. It does not actually publish the ports.
+
+Entry point: The ENTRYPOINT instruction specifies the command that will be executed when the container runs as an executable. It is often used in combination with the CMD instruction.
+
+Container metadata: Additional metadata about the image can be added using the LABEL instruction.
+
+Container user: The USER instruction specifies the user context for any subsequent commands such as RUN, CMD, or ENTRYPOINT.
+
+Execution context: The CMD instruction provides a default command to run when the container starts. It can be overridden by specifying a command during the docker run command.
+
+These instructions can be combined in any order to create a Dockerfile that accurately reflects the desired configuration of the image.
 
 ## Code
 ---
 
+
 ## Do's and Dont's
 ---
+
 
 ### Cloud Native
 ---
