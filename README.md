@@ -31,7 +31,6 @@ On the other hand, **microservices** represent a way of building applications wh
 - Transient errors, implement retry strategies to fix this
 - multiple points of failure can occur instead of SPoF
 
-
 ### Microservices Benefits
 | There are also plenty of benefits preinstalled into microservices as well.
 - improved fault isolation, less risk of single points of failure
@@ -97,6 +96,10 @@ docker run -d image:0.14
 ```
 - to exit the process 'ctrl + c' will kill the contianer and the process will die. 
 - if you execute the run command without pulling the image first Docker will automatically search for, pull, then run the image specified.
+```
+docker stop
+```
+- stops all running containers
 
 ## Files
 ---
@@ -128,11 +131,28 @@ These instructions can be combined in any order to create a Dockerfile that accu
 
 ## Code
 ---
+- code snippet example:
+```
+FROM ubuntu:latest
 
+RUN apt-get update && apt-get install -y nginx
+
+COPY index.html /usr/share/nginx/html/
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
+```
 
 ## Do's and Dont's
 ---
+DO:
+- use the same port on your host that your container is using
+---
+DONT:
 
+---
 
 ### Cloud Native
 ---
@@ -147,14 +167,11 @@ Uses containers, service meshes, microservices, immutable infrastructure, and de
 
 ## Video Archive
 ---
-[FCC Docker & K8S Training Course](https://youtu.be/kTp5xUtcalw)
-[virtual machines vs containers](https://youtu.be/eyNBf1sqdBQ)
-[1hr Docker Crash Course](https://www.youtube.com/watch?v=pg19Z8LL06w)
+- [FCC Docker & K8S Training Course](https://youtu.be/kTp5xUtcalw)
+- [virtual machines vs containers](https://youtu.be/eyNBf1sqdBQ)
+- [1hr Docker Crash Course](https://www.youtube.com/watch?v=pg19Z8LL06w)
 
 ## Additional Resources
 ---
-[Docker Docs](https://docs.docker.com)
-[Cloud Native Interactive Landscape](landscape.cncf.io/?fullscreen=yes)
-
-
-
+- [Docker Docs](https://docs.docker.com)
+- [Cloud Native Interactive Landscape](landscape.cncf.io/?fullscreen=yes)
