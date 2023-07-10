@@ -167,6 +167,7 @@ Uses containers, service meshes, microservices, immutable infrastructure, and de
 
 ## Video Archive
 ---
+- [FCC Docker Beginners Course](https://youtu.be/RqTEHSBrYFw)
 - [FCC Docker & K8S Training Course](https://youtu.be/kTp5xUtcalw)
 - [virtual machines vs containers](https://youtu.be/eyNBf1sqdBQ)
 - [1hr Docker Crash Course](https://www.youtube.com/watch?v=pg19Z8LL06w)
@@ -175,3 +176,5 @@ Uses containers, service meshes, microservices, immutable infrastructure, and de
 ---
 - [Docker Docs](https://docs.docker.com)
 - [Cloud Native Interactive Landscape](landscape.cncf.io/?fullscreen=yes)
+- [Docker Tutorial by Anthony Baire](https://people.irisa.fr/Anthony.Baire/docker-tutorial.pdf)
+- [Learn Docker by Tutorials Point](https://www.tutorialspoint.com/docker/)
