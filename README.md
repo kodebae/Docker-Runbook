@@ -6,9 +6,9 @@ A place for Docker tutorials, learning, examples, and an overall resource guide.
 
 ## Intro
 ---
-**Docker is a platform** that allows developers to easily develop, deploy, and run applications in a containerized environment. Docker containers are lightweight, flexible, and can be run on any operating system. They allow developers to package an application with all of its dependencies into a single, portable container, ensuring that the application runs consistently in any environment. This makes it easier to manage and deploy applications, as well as streamline the development process. 
+**Docker is a platform** that allows developers to easily develop, deploy, and run applications in a containerized environment. Docker containers are lightweight, flexible, and can be run on any operating system. They allow developers to package an application with all of its dependencies into a single, portable container, ensuring that the application runs consistently in any environment. This makes it easier to manage and deploy applications, as well as streamline the development process. Containers are great for continuous integration and continuous delivery (CI/CD) workflows.
 
-**What is Docker?** Docker is a virtualization software that makes developing and deploying applications much easier. Docker packages all necessary dependencies, libraries, configuration, system tools and runtime into a container. Which can be easily shared and distributed.
+**What is Docker?** Docker is a virtualization software that makes developing and deploying applications much easier. Docker packages all necessary dependencies, libraries, configuration, system tools and runtime into a container. Which can be easily shared and distributed. Docker uses a client-server architecture. The Docker client talks to the Docker daemon, which does the heavy lifting of building, running, and distributing your Docker containers. 
 
 With containers you don't have to install any of the services directly onto your operating system.
 
@@ -154,6 +154,14 @@ DONT:
 
 ---
 
+## Getting Started Guide
+1. clone the following files: 
+```
+ git clone https://github.com/docker/getting-started-app.git
+```
+
+
+---
 ### Cloud Native
 ---
 Uses containers, service meshes, microservices, immutable infrastructure, and declarative API's. Cloud-native refers to an approach to developing and running applications that takes full advantage of the cloud computing delivery model. Cloud-native applications are architected specifically to run optimally in the dynamic and distributed environments that are characteristic of modern cloud infrastructure. These applications are designed to be highly scalable, resilient, and automated, with a focus on maximizing efficiency, agility, and flexibility. Key characteristics of cloud-native applications include the use of containerization, microservices architecture, and DevOps practices, along with a focus on continuous integration and delivery (CI/CD) and infrastructure as code (IaC).
@@ -174,7 +182,7 @@ Uses containers, service meshes, microservices, immutable infrastructure, and de
 
 ## Additional Resources
 ---
-- [Docker Docs](https://docs.docker.com)
+- [Docker Docs](https://docs.docker.com/get-started/overview/)
 - [Cloud Native Interactive Landscape](landscape.cncf.io/?fullscreen=yes)
 - [Docker Tutorial by Anthony Baire](https://people.irisa.fr/Anthony.Baire/docker-tutorial.pdf)
 - [Learn Docker by Tutorials Point](https://www.tutorialspoint.com/docker/)
