@@ -172,10 +172,34 @@ docker run -dp 127.0.0.1:3000:3000 getting-started
 docker ps
 ```
 
+## How to update your application
+ 1. make the code updates to your application
+
+ 2. after making your code updates run the following Docker command:
+ ```
+ docker build -t getting-started .
+ ```
+ > You might see an error here if you have an old container running. The reason is that the old container is already using the host's port 3000 and only one process on the machine (containers included) can listen to a specific port. To fix this, you need to remove the old container.
+
+ 3. list the old container:
+ ```
+ docker ps
+ ```
+
+ 4. now remove it
+ ```
+ docker rm <container-id>
+ ```
+ > You can stop and remove a container in a single command by adding the force flag to the docker rm command. For example: docker rm -f <the-container-id>
+
+5. now start the new container:
+```
+docker run <container-id>
+```
+
+> your new updated container should be running now with a new container id
 
 ---
-
-
 ### Microservices Risks
 | It's important to note that microservices come with their own risk factors preinstalled.
 - unnecessarily complexity
