@@ -18,27 +18,6 @@ On the other hand, **microservices** represent a way of building applications wh
 
 **Docker IS NOT a virtual machine.** Docker will virtualize the application layer and use the Kernel of the host. It doesn't have it own Kernel. A virtual machine has it's own Kernel and also uses the application layer. Docker image files are much smaller. Docker containers takes seconds,not minuets.
 
-### Microservices Risks
-| It's important to note that microservices come with their own risk factors preinstalled.
-- unnecessarily complexity
-- changes impact numerous services
-- complex security
-- complexity is added to resolve complexity issues
-- testing might appear simpler, but usually isn't
-- deployment may appear simpler, but usually isn't
-- multiple databases
-- latency issues may be added via the API layer. So additional testing is required
-- Transient errors, implement retry strategies to fix this
-- multiple points of failure can occur instead of SPoF
-
-### Microservices Benefits
-| There are also plenty of benefits preinstalled into microservices as well.
-- improved fault isolation, less risk of single points of failure
-- eliminate vendor or technology lock-in
-- easy to understand
-- smaller and faster to deploy
-- scalability
-
 ## Basics
 ---
 1.  What is a Docker Image?
@@ -145,6 +124,57 @@ CMD ["nginx", "-g", "daemon off;"]
 
 ```
 
+## Getting Started Guide
+### Build an image
+1. clone the following files: 
+```
+ git clone https://github.com/docker/getting-started-app.git
+```
+
+2. cd into the directory
+```
+cd getting-started-app
+```
+
+3. create Docker file
+```
+touch Dockerfile
+```
+
+4. add to the Docker file
+```
+# syntax=docker/dockerfile:1
+
+FROM node:18-alpine
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
+EXPOSE 3000
+```
+
+5. build image in the terminal
+```
+ docker build -t getting-started .
+```
+<p>The docker build command uses the Dockerfile to build a new image. You might have noticed that Docker downloaded a lot of "layers". This is because you instructed the builder that you wanted to start from the node:18-alpine image. But, since you didn't have that on your machine, Docker needed to download the image.</p>
+
+## How to start a container
+
+1. start your container
+```
+docker run -dp 127.0.0.1:3000:3000 getting-started
+```
+> After a few seconds, open your web browser to http://localhost:3000open_in_new. You should see your app.
+
+2. list your containers
+```
+docker ps
+```
+
+
+---
+
 ## Do's and Dont's
 ---
 DO:
@@ -154,12 +184,26 @@ DONT:
 
 ---
 
-## Getting Started Guide
-1. clone the following files: 
-```
- git clone https://github.com/docker/getting-started-app.git
-```
+### Microservices Risks
+| It's important to note that microservices come with their own risk factors preinstalled.
+- unnecessarily complexity
+- changes impact numerous services
+- complex security
+- complexity is added to resolve complexity issues
+- testing might appear simpler, but usually isn't
+- deployment may appear simpler, but usually isn't
+- multiple databases
+- latency issues may be added via the API layer. So additional testing is required
+- Transient errors, implement retry strategies to fix this
+- multiple points of failure can occur instead of SPoF
 
+### Microservices Benefits
+| There are also plenty of benefits preinstalled into microservices as well.
+- improved fault isolation, less risk of single points of failure
+- eliminate vendor or technology lock-in
+- easy to understand
+- smaller and faster to deploy
+- scalability
 
 ---
 ### Cloud Native
@@ -183,6 +227,7 @@ Uses containers, service meshes, microservices, immutable infrastructure, and de
 ## Additional Resources
 ---
 - [Docker Docs](https://docs.docker.com/get-started/overview/)
+- [Docker CLI Reference](https://docs.docker.com/engine/reference/commandline/cli/)
 - [Cloud Native Interactive Landscape](landscape.cncf.io/?fullscreen=yes)
 - [Docker Tutorial by Anthony Baire](https://people.irisa.fr/Anthony.Baire/docker-tutorial.pdf)
 - [Learn Docker by Tutorials Point](https://www.tutorialspoint.com/docker/)
