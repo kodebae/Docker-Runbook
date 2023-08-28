@@ -196,8 +196,27 @@ docker ps
 ```
 docker run <container-id>
 ```
+> Your new updated container should be running now with a new container id.
 
-> your new updated container should be running now with a new container id
+## How to share and push your app to Docker registry
+
+### Create a repository
+1. Navigate to the Docker hub to create our repository: --> [Docker Hub](https://hub.docker.com/)
+2. Click "repositories at the top of the screen
+3. Create a new public repository, you must give it a name
+4. Sign into Docker in your command line
+```
+docker login -u your-username-goes-here
+```
+
+### Push the image
+```
+docker push <your-image-id>
+```
+> If you don't specify a tag, Docker will name it "latest".
+
+
+
 
 ---
 ### Microservices Risks
