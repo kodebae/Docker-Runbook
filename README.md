@@ -175,14 +175,6 @@ docker ps
 
 ---
 
-## Do's and Dont's
----
-DO:
-- use the same port on your host that your container is using
----
-DONT:
-
----
 
 ### Microservices Risks
 | It's important to note that microservices come with their own risk factors preinstalled.
