@@ -214,10 +214,6 @@ docker login -u your-username-goes-here
 docker push <your-image-id>
 ```
 > If you don't specify a tag, Docker will name it "latest".
-
-
-
-
 ---
 ### Microservices Risks
 | It's important to note that microservices come with their own risk factors preinstalled.
