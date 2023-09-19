@@ -258,7 +258,13 @@ Uses containers, service meshes, microservices, immutable infrastructure, and de
 ## Additional Resources
 ---
 - [Docker Docs](https://docs.docker.com/get-started/overview/)
+- [Installing Docker](https://www.youtube.com/watch?v=wH9XesmPUOk)
 - [Docker CLI Reference](https://docs.docker.com/engine/reference/commandline/cli/)
 - [Cloud Native Interactive Landscape](landscape.cncf.io/?fullscreen=yes)
 - [Docker Tutorial by Anthony Baire](https://people.irisa.fr/Anthony.Baire/docker-tutorial.pdf)
 - [Learn Docker by Tutorials Point](https://www.tutorialspoint.com/docker/)
+- [Containers 101](https://www.youtube.com/watch?v=eGz9DS-aIeY)
+- [Beginner Docker Commands](https://www.youtube.com/watch?v=xGn7cFR3ARU)
+- [Working with Docker Files](https://www.youtube.com/watch?v=WmcdMiyqfZs)
+- [Docker Volumes and Persistent Storage](https://www.youtube.com/watch?v=OrQLrqQm4M0)
+
