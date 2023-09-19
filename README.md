@@ -267,4 +267,6 @@ Uses containers, service meshes, microservices, immutable infrastructure, and de
 - [Beginner Docker Commands](https://www.youtube.com/watch?v=xGn7cFR3ARU)
 - [Working with Docker Files](https://www.youtube.com/watch?v=WmcdMiyqfZs)
 - [Docker Volumes and Persistent Storage](https://www.youtube.com/watch?v=OrQLrqQm4M0)
-
+- [Docker Networking](https://www.youtube.com/watch?v=bKFMS5C4CG0)
+- [Docker Compose](https://www.youtube.com/watch?v=qH4ZKfwbO8w)
+- [Docker Best Practices](https://www.youtube.com/watch?v=8vXoMqWgbQQ)
